@@ -1,0 +1,125 @@
+:root{
+/*  ### Primary */
+
+--Orange: hsl(25, 97%, 53%);
+
+/* ### Neutral */
+
+--White: hsl(0, 0%, 100%);
+--Light-Grey: hsl(217, 12%, 63%);
+--Medium-Grey: hsl(216, 12%, 54%);
+--Medium-Grey-Opacity: hsl(216, 12%, 54%, .15);
+--Dark-Blue: hsl(213, 19%, 18%);
+--Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: 'Overpass', sans-serif;
+    color: var(--White);
+    font-style: normal;
+}
+
+::selection {
+    background-color: var(--Orange);
+    color: var(--White)
+}
+
+p{
+    font-size: 15px;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-Dark-Blue);
+}
+
+.card{
+    width: 340px;
+    height: 340px;
+    background-image: linear-gradient(var(--Dark-Blue) 0%, var(--Medium-Grey-Opacity) 100%);
+    border-radius: 25px;
+    padding: 35px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.icon-star{
+    height: 50px;
+    width: 50px;
+    background-color: var(--Dark-Blue);
+    filter: brightness(110%);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-text>p{
+    color: var(--Medium-Grey);
+}
+
+.rating{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+}
+
+#rating-select>input{
+    display:none;
+}
+
+.rating-select{
+    width: 50px;
+    height: 50px;
+    background-color: var(--Dark-Blue);
+    color: var(--Medium-Grey);
+    font-size: medium;
+    filter: brightness(110%);
+    border-radius: 50px;
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease-out .1s;
+}
+
+.rating-select:hover{
+    opacity:100%;
+    color: var(--White);
+    background-color: var(--Medium-Grey);
+}
+
+.rating-select:active{
+    background-color: var(--Orange);
+    box-shadow: 0 0 15px var(--Orange);
+}
+
+.btn-submit{
+    width: 100%;
+    padding: 15px 0;
+    background-color: var(--Orange);
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: ease-out .1s;
+}
+
+.btn-submit:active{
+    background-color: var(--White);
+    color: var(--Orange);
+}
